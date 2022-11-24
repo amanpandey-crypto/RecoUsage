@@ -1,0 +1,15 @@
+version: '2'
+services:
+  api:
+    container_name: Reco_backend
+    image: Reco_backend
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    depends_on:
+      - kafka
+    restart: always
+    ports:
+      - '80:80'
+    # volumes:
+    #   - ./logs/fastapi_logs:/module/fastapi_logs
