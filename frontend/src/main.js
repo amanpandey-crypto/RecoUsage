@@ -1,12 +1,15 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue';
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css';
 import App from './App.vue'
-import router from './router/index.js'
-// import UserLogin from '../components/UserLogin.vue';
-// import UserSignup from '../components/UserSignup.vue'
+import router from './router'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '@/assets/css/main.css'
-
+import './scss/app.scss';
 const app = createApp(App)
+
 app.use(router);
-app.mount('#app')
+app.use(Antd);
+
+app.config.productionTip = false
+
+app.mount('#app');
