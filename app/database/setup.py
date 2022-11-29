@@ -17,3 +17,5 @@ device_collection = database["device_collection"]
 user_collection = database["user_collection"]
 
 session_info = database["session_info"]
+
+sensor_data = database["sensor_data"]

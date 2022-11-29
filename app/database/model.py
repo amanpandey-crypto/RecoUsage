@@ -28,15 +28,15 @@ class User(BaseModel):
         }
 
 class Device(BaseModel):
-    owner: str = Field(default=None)
     name: str = Field(default=None)
+    quantity: int = Field(default=1)
     description: str = Field(default=None)
     power_rated: int = Field(default=None)
     class Config:
         device_schema = {
             "user_demo":{
-                "owner" :"new",
                 "name" : "bulb",
+                "quantity": 1,
                 "description" : "kitchen bulb",
                 "power_rated": 10,
             }
